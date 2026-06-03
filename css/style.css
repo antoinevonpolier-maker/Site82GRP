@@ -542,7 +542,7 @@ table.calendar td { padding: 6px; height: 92px; width: 13%; }
   .nav-links { display: none; }
   .burger { display: block; }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .filigree { display: none; }
 }
 @media (max-width: 980px) {
