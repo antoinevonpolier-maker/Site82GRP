@@ -538,6 +538,13 @@ table.calendar td { padding: 6px; height: 92px; width: 13%; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1280px) {
+  .nav-links { display: none; }
+  .burger { display: block; }
+}
+@media (max-width: 1200px) {
+  .filigree { display: none; }
+}
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .hero-emblem-wrap { order: -1; }
