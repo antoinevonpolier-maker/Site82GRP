@@ -570,3 +570,117 @@ table.calendar td { padding: 6px; height: 92px; width: 13%; }
 .drawer a { font-family: var(--display); font-size: 22px; letter-spacing: .14em; text-transform: uppercase; color: #e7ecf5; }
 .drawer a:hover { color: var(--gold-bright); }
 .drawer .close { position: absolute; top: 24px; right: 26px; background: none; border: none; color: var(--gold); font-size: 34px; cursor: pointer; }
+
+/* ============================================================
+   EASTER EGG — « L'ASILE » (2ème Corps) — chaos total 🤪
+   ============================================================ */
+/* Totalement caché : aucun indice visuel, le mot reste normal */
+.secret-trigger { cursor: inherit; }
+
+/* L'overlay de chaos couvre tout l'écran */
+.chaos-overlay {
+  position: fixed; inset: -30px; z-index: 9000;
+  overflow: hidden; pointer-events: none;
+  display: none;
+}
+.chaos-overlay.open { display: block; pointer-events: auto; }
+.chaos-overlay.open { animation: pageQuake 1.2s ease-in-out infinite; }
+
+/* Fond doux qui ondule lentement (non épileptique) */
+.chaos-strobe {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(135deg, #1a0b2e, #2a0a3a, #0a1530, #2a0a1a);
+  background-size: 300% 300%;
+  animation: chaosWash 8s ease infinite;
+}
+@keyframes chaosWash {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Secousse légère appliquée à l'overlay lui-même (pas au body — sinon ça casse position:fixed) */
+@keyframes pageQuake {
+  0%,100% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(-3px,2px) rotate(-.4deg); }
+  50% { transform: translate(3px,-2px) rotate(.4deg); }
+  75% { transform: translate(-2px,3px) rotate(-.3deg); }
+}
+
+/* Éléments projetés (images, mots, emojis) */
+.chaos-item {
+  position: absolute; z-index: 5; will-change: transform;
+  pointer-events: none; user-select: none;
+}
+.chaos-item img {
+  display: block; border: 5px solid #fff;
+  box-shadow: 0 0 0 3px #000, 0 14px 40px rgba(0,0,0,.6);
+  border-radius: 8px;
+}
+.chaos-word {
+  font-family: var(--display); font-weight: 800; text-transform: uppercase;
+  white-space: nowrap; letter-spacing: .04em;
+  text-shadow: 3px 3px 0 #000, -2px -2px 0 #fff;
+  -webkit-text-stroke: 1px #000;
+}
+.chaos-emoji { line-height: 1; }
+
+@keyframes chaosFloat {
+  0%   { transform: translate(0,0) rotate(var(--r0)) scale(var(--s)); }
+  25%  { transform: translate(var(--x1),var(--y1)) rotate(var(--r1)) scale(var(--s)); }
+  50%  { transform: translate(var(--x2),var(--y2)) rotate(var(--r2)) scale(var(--s)); }
+  75%  { transform: translate(var(--x3),var(--y3)) rotate(var(--r3)) scale(var(--s)); }
+  100% { transform: translate(var(--x0),var(--y0)) rotate(var(--r0)) scale(var(--s)); }
+}
+@keyframes chaosSpin {
+  from { transform: rotate(0deg) scale(var(--s)); }
+  to   { transform: rotate(360deg) scale(var(--s)); }
+}
+@keyframes chaosPop {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  60% { transform: scale(1.25) rotate(12deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Bandeau "ASILE" central qui pulse doucement */
+.chaos-title {
+  position: absolute; top: 50%; left: 50%; z-index: 50;
+  transform: translate(-50%,-50%);
+  font-family: var(--display); font-weight: 800; font-size: clamp(50px, 13vw, 200px);
+  color: rgba(255,255,255,.92); text-transform: uppercase; letter-spacing: .02em;
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 5px 5px 0 rgba(201,16,46,.8), -5px -5px 0 rgba(26,56,101,.8);
+  animation: titlePulse 1.4s ease-in-out infinite alternate;
+  pointer-events: none; white-space: nowrap; opacity: .85;
+}
+@keyframes titlePulse {
+  from { transform: translate(-50%,-50%) scale(1) rotate(-2deg); }
+  to   { transform: translate(-50%,-50%) scale(1.06) rotate(2deg); }
+}
+
+/* Rick Astley — la star de l'asile 🕺 */
+.chaos-rick {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%) rotate(-2deg);
+  z-index: 70; pointer-events: none;
+  width: min(46vw, 520px); aspect-ratio: 16/9;
+  border: 6px solid #fff; border-radius: 10px;
+  box-shadow: 0 0 0 4px #000, 0 24px 60px rgba(0,0,0,.7);
+  background: #000;
+  animation: rickWobble 2.4s ease-in-out infinite alternate;
+}
+.chaos-rick iframe { width: 100%; height: 100%; border: 0; display: block; border-radius: 4px; }
+@keyframes rickWobble {
+  from { transform: translate(-50%,-50%) rotate(-2deg) scale(1); }
+  to   { transform: translate(-50%,-50%) rotate(2deg) scale(1.03); }
+}
+
+/* Bouton stop discret */
+.chaos-stop {
+  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  z-index: 100; pointer-events: auto;
+  font-family: var(--display); font-size: 13px; letter-spacing: .2em; text-transform: uppercase;
+  padding: 12px 26px; cursor: pointer;
+  background: #000; color: #fff; border: 2px solid var(--gold);
+}
+.chaos-stop:hover { background: var(--gold); color: #000; }
