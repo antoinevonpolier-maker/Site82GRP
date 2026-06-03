@@ -490,6 +490,35 @@ table.calendar td { padding: 6px; height: 92px; width: 13%; }
 .trailer-placeholder p { font-family: var(--display); letter-spacing: .18em; text-transform: uppercase; font-size: 14px; }
 
 /* ============================================================
+   FAQ
+   ============================================================ */
+.faq { background: var(--navy-800); }
+.faq .section-title { color: #fff; font-size: clamp(30px, 3.6vw, 48px); }
+.faq-list { max-width: 860px; margin: 54px auto 0; display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  border: 1px solid rgba(201,162,74,.22);
+  background: linear-gradient(180deg, rgba(26,56,101,.32), rgba(12,28,58,.18));
+  transition: border-color .25s ease;
+}
+.faq-item[open] { border-color: rgba(201,162,74,.5); }
+.faq-item summary {
+  list-style: none; cursor: pointer; padding: 22px 26px;
+  font-family: var(--display); font-size: clamp(17px, 2vw, 21px); font-weight: 600;
+  color: var(--gold-bright); letter-spacing: .01em;
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; font-size: 26px; color: var(--gold); flex: none; line-height: 1;
+  transition: transform .25s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-a { padding: 0 26px 24px; }
+.faq-a p { margin: 0; color: #c3ccdb; font-size: 17px; line-height: 1.7; }
+.faq-a a { color: var(--gold-bright); text-decoration: underline; text-underline-offset: 2px; }
+.faq-a a:hover { color: var(--gold); }
+
+/* ============================================================
    RECRUTEMENT
    ============================================================ */
 .recrutement {
