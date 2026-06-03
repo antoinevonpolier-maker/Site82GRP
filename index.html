@@ -208,7 +208,7 @@
         <div class="corps-head">
           <div class="corps-num">IIe C.</div>
           <h3>2<sup style="font-size:.5em">ème</sup> Corps</h3>
-          <span class="roman">« Là où nous passons, le silence suit ! »</span>
+          <span class="roman">« Là où nous passons, le <span class="secret-trigger" id="secretSilence" title="…">silence</span> suit ! »</span>
         </div>
         <div class="units">
           <div class="unit">
@@ -327,7 +327,7 @@
     <span class="eyebrow">Champs de bataille</span>
     <h2 class="section-title">Galerie</h2>
     <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
-    <p class="lead">Déposez vos plus belles captures : il suffit de glisser une image sur chaque cadre.</p>
+    <p class="lead">Le 82GRP en valeur sur Holdfast</p>
   </div>
   <div class="wrap" style="margin-top:46px">
     <div class="gal-grid reveal">
@@ -412,6 +412,14 @@
   <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">&#8250;</button>
 </div>
 
+<!-- ===================== EASTER EGG « L'ASILE » ===================== -->
+<div class="chaos-overlay" id="chaosOverlay" aria-hidden="true">
+  <div class="chaos-strobe"></div>
+  <audio id="rickAudio" src="assets/chaos/rickroll.mp3" loop preload="auto"></audio>
+  <div class="chaos-title" id="chaosTitle">ASILE</div>
+  <button class="chaos-stop" id="chaosStop" type="button">Reprendre ses esprits</button>
+</div>
+
 <script>
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -448,6 +456,144 @@
     if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
     if (e.key === 'ArrowRight') showLb(lbIndex + 1);
   });
+
+  /* =====================================================================
+     EASTER EGG « L'ASILE » — 5 clics sur le mot « silence » (2ème Corps)
+     ===================================================================== */
+  const CHAOS_IMAGES = [
+    "assets/chaos/c01.png","assets/chaos/c02.gif","assets/chaos/c03.jpg","assets/chaos/c04.png",
+    "assets/chaos/c05.png","assets/chaos/c06.png","assets/chaos/c07.png","assets/chaos/c08.png",
+    "assets/chaos/c09.jpg","assets/chaos/c10.png","assets/chaos/c11.png","assets/chaos/c12.png",
+    "assets/chaos/c13.png","assets/chaos/c14.png","assets/chaos/c15.png","assets/chaos/c16.png"
+  ];
+  const CHAOS_WORDS = ["ASILE", "82GRP", "FOLIE", "GLOIRE & FOLIE", "LA CHASSE AU FÉLIN",
+                       "SI VIS PACEM PARA ASYLUM", "BIENVENUE AU 82", "LE SILENCE", "AAAAAH", "🚑", "💈", "🧠"];
+  const CHAOS_EMOJIS = ["🤪","😵‍💫","🤡","🌀","👁️","🚑","💊","🧠","🫡","🎺","🔔","⚡","💥","🥁","🪖"];
+  const CHAOS_COLORS = ["#ff00d4","#00ffea","#faff00","#ff2200","#6a00ff","#00ff66","#ffffff"];
+
+  const trigger = document.getElementById('secretSilence');
+  const overlay = document.getElementById('chaosOverlay');
+  const titleEl = document.getElementById('chaosTitle');
+  const stopBtn = document.getElementById('chaosStop');
+
+  // préchargement des images du délire
+  CHAOS_IMAGES.forEach(src => { const i = new Image(); i.src = src; });
+
+  let clicks = 0, clickTimer = null, chaosOn = false;
+  let spawnInt = null, titleInt = null;
+  const rickAudio = document.getElementById('rickAudio');
+
+  if (trigger) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clicks = 0; }, 1400); // fenêtre entre clics
+      if (clicks >= 5) { clicks = 0; launchChaos(); }
+    });
+  }
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  function spawnItem() {
+    const item = document.createElement('div');
+    item.className = 'chaos-item';
+    const W = window.innerWidth, H = window.innerHeight;
+    const x = rand(0, W), y = rand(0, H);
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+
+    const roll = Math.random();
+    if (CHAOS_IMAGES.length && roll < 0.78) {
+      const img = document.createElement('img');
+      img.src = pick(CHAOS_IMAGES);
+      img.style.width = rand(170, 430) + 'px';
+      item.appendChild(img);
+    } else if (roll < 0.9) {
+      item.classList.add('chaos-word');
+      item.textContent = pick(CHAOS_WORDS);
+      item.style.fontSize = rand(28, 86) + 'px';
+      item.style.color = pick(CHAOS_COLORS);
+    } else {
+      item.classList.add('chaos-emoji');
+      item.textContent = pick(CHAOS_EMOJIS);
+      item.style.fontSize = rand(40, 130) + 'px';
+    }
+
+    // animation aléatoire
+    const s = rand(0.6, 1.4);
+    item.style.setProperty('--s', s);
+    const anim = Math.random();
+    if (anim < 0.6) {
+      // flotte doucement
+      for (let i = 0; i <= 3; i++) {
+        item.style.setProperty('--x' + (i || 0), rand(-130, 130) + 'px');
+        item.style.setProperty('--y' + (i || 0), rand(-130, 130) + 'px');
+        item.style.setProperty('--r' + (i || 0), rand(-25, 25) + 'deg');
+      }
+      item.style.setProperty('--x0', '0px');
+      item.style.setProperty('--y0', '0px');
+      item.style.setProperty('--r0', rand(-12, 12) + 'deg');
+      item.style.animation = `chaosFloat ${rand(3.5, 6)}s ease-in-out infinite`;
+    } else if (anim < 0.8) {
+      item.style.animation = `chaosSpin ${rand(2.5, 5)}s linear infinite`;
+    } else {
+      item.style.animation = `chaosPop ${rand(0.4, 0.7)}s ease-out forwards`;
+    }
+
+    overlay.appendChild(item);
+    // les images restent visibles plus longtemps
+    setTimeout(() => item.remove(), rand(4500, 8500));
+  }
+
+  function startAudio() {
+    // 🎵🕺 Rickroll — lecture du MP3 en boucle
+    if (!rickAudio) return;
+    try {
+      rickAudio.currentTime = 0;
+      rickAudio.volume = 0.85;
+      const p = rickAudio.play();
+      if (p && p.catch) p.catch(() => {});
+    } catch (err) { /* lecture impossible */ }
+  }
+
+  function stopAudio() {
+    if (!rickAudio) return;
+    try { rickAudio.pause(); rickAudio.currentTime = 0; } catch (e) {}
+  }
+
+  function launchChaos() {
+    chaosOn = true;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    // 🔒 enfermé dans l'asile : on bloque le scroll
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    startAudio();
+    // salve d'éléments (relançable à chaque déclenchement)
+    for (let i = 0; i < 14; i++) setTimeout(spawnItem, i * 80);
+    if (!spawnInt) spawnInt = setInterval(spawnItem, 230);
+    if (!titleInt) titleInt = setInterval(() => { titleEl.textContent = pick(CHAOS_WORDS); }, 900);
+  }
+
+  function stopChaos() {
+    if (!chaosOn) return;
+    chaosOn = false;
+    clearInterval(spawnInt); clearInterval(titleInt);
+    spawnInt = null; titleInt = null;
+    stopAudio();
+    // 🔓 libéré : on rend le scroll
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    titleEl.textContent = 'ASILE';
+    overlay.querySelectorAll('.chaos-item').forEach(el => el.remove());
+  }
+
+  if (stopBtn) stopBtn.addEventListener('click', stopChaos);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && chaosOn) stopChaos(); });
 </script>
 </body>
 </html>
