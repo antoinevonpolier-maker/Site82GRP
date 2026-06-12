@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Régiment FR Holdfast Nations At War — 82ème Grenadiers à Pied | Recrutement</title>
+<meta name="description" content="Rejoignez le meilleur régiment français sur Holdfast: Nations At War. Linebattles, entraînements, communauté francophone active. Recrutement ouvert." />
+<meta name="keywords" content="Holdfast régiment français, régiment FR Holdfast, 82GRP, 82ème Régiment de Grenadiers à Pied, Holdfast Nations At War, régiment napoléonien français, communauté Holdfast FR, line battle français, recrutement régiment Holdfast" />
+<meta name="author" content="82GRP — 82ème Régiment de Grenadiers à Pied" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0c1c3a" />
+<link rel="canonical" href="https://82grp-holdfast.fr/" />
+
+<!-- Open Graph (partages Discord / Facebook) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="82GRP — Régiment français Holdfast" />
+<meta property="og:title" content="82GRP — Régiment français sur Holdfast: Nations At War" />
+<meta property="og:description" content="Régiment français sur Holdfast. Rejoignez le 82ème Régiment de Grenadiers à Pied pour des batailles organisées." />
+<meta property="og:image" content="https://82grp-holdfast.fr/assets/favicon-82.png" />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="82GRP — Régiment français Holdfast" />
+<meta name="twitter:description" content="Le 82ème Régiment de Grenadiers à Pied, communauté française napoléonienne sur Holdfast: Nations At War." />
+<meta name="twitter:image" content="https://82grp-holdfast.fr/assets/favicon-82.png" />
+
+<!-- Données structurées (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "82GRP — 82ème Régiment de Grenadiers à Pied",
+  "alternateName": "Régiment français Holdfast 82GRP",
+  "description": "Régiment français sur Holdfast: Nations At War — communauté napoléonienne FR proposant line battles, cavalerie, naval et events.",
+  "url": "https://82grp-holdfast.fr/",
+  "logo": "https://82grp-holdfast.fr/assets/favicon-82.png",
+  "slogan": "Vaincre n'importe qui, n'importe où, n'importe quand !",
+  "sameAs": ["https://discord.gg/Ak2KTBhHhd"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le 82GRP ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le 82GRP (82ème Régiment de Grenadiers à Pied) est un régiment français sur Holdfast: Nations At War. Une communauté francophone réunie autour de l'époque napoléonienne qui organise des batailles en ligne, entraînements et événements entre régiments." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment rejoindre un régiment français sur Holdfast ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rejoignez le serveur Discord du 82GRP, présentez-vous via le formulaire d'engagement, choisissez votre corps d'armée et participez à votre première bataille. Aucune candidature compliquée : la motivation suffit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il de l'expérience pour rejoindre le régiment ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Le 82GRP accueille débutants comme vétérans. Les gradés forment les nouvelles recrues aux formations, ordres et à la discipline de ligne lors des entraînements." }
+    },
+    {
+      "@type": "Question",
+      "name": "Sur quels modes de jeu joue le régiment ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Line battles entre régiments, cavalerie, batailles navales, événements Guerre des Régiments et créneaux libres d'entraînement. Le planning hebdomadaire complet est sur le site." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le 82GRP est-il une communauté francophone active ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, une communauté française active toute la semaine en soirée, qui joue et progresse ensemble sur Discord et en jeu sur Holdfast: Nations At War." }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/png" href="assets/favicon-82.png" />
+<link rel="apple-touch-icon" href="assets/favicon-82.png" />
+</head>
+<body>
+
+<!-- ===================== OUVERTURE ===================== -->
+<div class="intro" id="curtain" aria-hidden="true">
+  <div class="intro-seal">
+    <svg class="intro-ring" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="57" />
+    </svg>
+    <img src="assets/logo-82-circle.png" alt="" />
+  </div>
+  <div class="intro-word">82<sup>e</sup> Régiment de Grenadiers à Pied</div>
+</div>
+
+<!-- ===================== MUSIQUE DE FOND ===================== -->
+<audio id="bgm" src="assets/audio/ambiance.mp3" loop preload="auto"></audio>
+<button id="bgm-toggle" class="bgm-toggle" type="button" aria-label="Activer la musique" aria-pressed="false">
+  <span class="bgm-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="bgm-label">Musique</span>
+</button>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="brand">
+      <img src="assets/logo-82.png" alt="Emblème 82GRP" />
+      <span class="brand-txt">
+        <b>82<span style="display:inline;color:var(--gold);font-size:inherit;letter-spacing:inherit;">GRP</span></b>
+        <span>Grenadiers à Pied</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="#presentation">Le Régiment</a>
+      <a href="#compagnies">STRUCTURE</a>
+      <a href="#trailer">Trailer &amp; Galerie</a>
+      <a href="#calendrier">Calendrier</a>
+      <a href="#recrutement">Rejoindre &amp; FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.3.5a14.6 14.6 0 0 1 4.3 1.4 13.7 13.7 0 0 0-11-.1A14 14 0 0 1 12.8 3l-.2-.5A19.8 19.8 0 0 0 3.7 4.4 20.3 20.3 0 0 0 .2 18.1a19.9 19.9 0 0 0 6 3l.8-1.3a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.1 0l.5.4a12.9 12.9 0 0 1-2 1l.8 1.3a19.9 19.9 0 0 0 6-3 20.3 20.3 0 0 0-3.4-13.7ZM8.3 14.7c-1.2 0-2.1-1.1-2.1-2.4S7.1 9.9 8.3 9.9s2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Zm7.4 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Z"/></svg>
+        Discord
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="drawer" id="drawer">
+  <button class="close" id="drawerClose" aria-label="Fermer">&times;</button>
+  <a href="#presentation">Le Régiment</a>
+  <a href="#compagnies">Structure</a>
+  <a href="#trailer">Trailer &amp; Galerie</a>
+  <a href="#calendrier">Calendrier</a>
+  <a href="#recrutement">Rejoindre &amp; FAQ</a>
+  <a href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener" class="btn btn-gold">Rejoindre le Discord</a>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="hero" data-screen-label="Accueil">
+  <img class="hero-bg-img" src="assets/gallery/hero-bg.png" alt="" aria-hidden="true" />
+  <div class="filigree tl"><svg viewBox="0 0 100 100"><g fill="currentColor" opacity="0.38" stroke="none"><ellipse cx="33" cy="42" rx="15" ry="8" transform="rotate(-32 33 42)"/><ellipse cx="67" cy="42" rx="15" ry="8" transform="rotate(32 67 42)"/></g><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M47 24 C43 15 39 12 35 12"/><path d="M53 24 C57 15 61 12 65 12"/></g><g fill="currentColor" stroke="none"><circle cx="34" cy="11" r="2.3"/><circle cx="66" cy="11" r="2.3"/><circle cx="50" cy="27" r="5.6"/><ellipse cx="50" cy="40" rx="8.6" ry="7.6"/><ellipse cx="50" cy="53" rx="11.6" ry="6.4"/><ellipse cx="50" cy="65" rx="8.4" ry="5.8"/><path d="M50 81 C45 77 44 72 45.5 70 H54.5 C56 72 55 77 50 81 Z"/></g></svg></div>
+  <div class="filigree tr"><svg viewBox="0 0 100 100"><g fill="currentColor" opacity="0.38" stroke="none"><ellipse cx="33" cy="42" rx="15" ry="8" transform="rotate(-32 33 42)"/><ellipse cx="67" cy="42" rx="15" ry="8" transform="rotate(32 67 42)"/></g><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M47 24 C43 15 39 12 35 12"/><path d="M53 24 C57 15 61 12 65 12"/></g><g fill="currentColor" stroke="none"><circle cx="34" cy="11" r="2.3"/><circle cx="66" cy="11" r="2.3"/><circle cx="50" cy="27" r="5.6"/><ellipse cx="50" cy="40" rx="8.6" ry="7.6"/><ellipse cx="50" cy="53" rx="11.6" ry="6.4"/><ellipse cx="50" cy="65" rx="8.4" ry="5.8"/><path d="M50 81 C45 77 44 72 45.5 70 H54.5 C56 72 55 77 50 81 Z"/></g></svg></div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="hero-kicker"><span class="bar"></span> Holdfast: Nations At War</span>
+      <h1>82<sup>ème</sup> Régiment<br>de Grenadiers<br><span class="grp">à Pied</span></h1>
+      <p class="hero-sub">«&nbsp;Vaincre n'importe qui, n'importe où, n'importe quand&nbsp;!&nbsp;»</p>
+      <p class="hero-desc">Le 82GRP est un <strong>régiment FR Holdfast Nations At War</strong>. Notre communauté francophone participe à des batailles organisées et événements privés entre régiments. Rejoignez l'un des meilleurs régiments français Holdfast et combattez aux côtés de joueurs francophones&nbsp;!</p>
+      <div class="hero-actions">
+        <a href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.3.5a14.6 14.6 0 0 1 4.3 1.4 13.7 13.7 0 0 0-11-.1A14 14 0 0 1 12.8 3l-.2-.5A19.8 19.8 0 0 0 3.7 4.4 20.3 20.3 0 0 0 .2 18.1a19.9 19.9 0 0 0 6 3l.8-1.3a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.1 0l.5.4a12.9 12.9 0 0 1-2 1l.8 1.3a19.9 19.9 0 0 0 6-3 20.3 20.3 0 0 0-3.4-13.7ZM8.3 14.7c-1.2 0-2.1-1.1-2.1-2.4S7.1 9.9 8.3 9.9s2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Zm7.4 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Z"/></svg>
+          Rejoindre le régiment
+        </a>
+        <a href="#presentation" class="btn btn-ghost">Découvrir</a>
+      </div>
+      <div class="hero-live" id="discord-live" hidden>
+        <span class="live-dot"></span>
+        <span class="live-online"><strong data-live="online">—</strong> en ligne</span>
+        <span class="live-sep"></span>
+        <span class="live-total"><strong data-live="total">—</strong> membres</span>
+      </div>
+    </div>
+    <a class="hero-emblem-wrap" href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener" aria-label="Rejoindre le Discord du 82GRP">
+      <div class="hero-emblem-glow"></div>
+      <img class="hero-emblem" src="assets/logo-82.png" alt="Emblème du 82ème Régiment de Grenadiers à Pied" />
+    </a>
+  </div>
+
+  <a href="#presentation" class="scroll-hint">
+    <span class="mouse"></span>
+    Défiler
+  </a>
+</header>
+<div class="tricolore"></div>
+
+<!-- ======================= PRÉSENTATION ======================= -->
+<section class="section presentation" id="presentation" data-screen-label="Le Régiment">
+  <div class="wrap pres-grid">
+    <div class="pres-text reveal">
+      <span class="eyebrow">Qui sommes-nous</span>
+      <h2 class="section-title">Une famille<br>sous les aigles</h2>
+      <p class="lead">Le <strong>82GRP</strong> est un <strong>régiment français sur Holdfast: Nations At War</strong> — bien plus qu'un régiment de jeu : une bande de camarades réunis par la passion de l'époque napoléonienne et le plaisir de jouer ensemble. Sur le champ de bataille comme sur le Discord, l'esprit de régiment prime.</p>
+      <div class="pres-values">
+        <div class="value">
+          <svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.4 8 8 10 4.6-2 8-5 8-10V6l-8-4Z"/></svg>
+          <h4>Discipline</h4>
+          <p>Des formations efficaces, des ordres clairs, et une tenue digne de la Vieille Garde.</p>
+        </div>
+        <div class="value">
+          <svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="8" r="3.2"/><path d="M21 20v-2a4 4 0 0 0-3-3.8M16 5a3.2 3.2 0 0 1 0 6"/></svg>
+          <h4>Convivialité</h4>
+          <p>On joue avant tout pour s'amuser, entre amis, dans la bonne humeur.</p>
+        </div>
+        <div class="value">
+          <svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M6 9V4h12v5a6 6 0 0 1-12 0Z"/><path d="M6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 21h6M12 15v6"/></svg>
+          <h4>Prestige</h4>
+          <p>Des line battles compétitives où le 82 défend son rang et son honneur.</p>
+        </div>
+        <div class="value">
+          <svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M4 21V5a2 2 0 0 1 2-2h7l-1 3 1 3H6"/><path d="M4 21h6"/></svg>
+          <h4>Tradition</h4>
+          <p>Le respect de l'Histoire, des grades et des couleurs du drapeau tricolore.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pres-figure reveal">
+      <div class="frame">
+        <img src="assets/gallery/hero-officer.png" alt="Officier du 82GRP au garde-à-vous, sabre levé" />
+      </div>
+      <p class="cap">« Au rapport ! » — le 82GRP en grande tenue</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CINEMATIC BAND ======================= -->
+<section class="band" aria-label="Devise du régiment">
+  <div class="band-bg" style="background-image:url('assets/gallery/propa2.png')"></div>
+  <div class="band-inner">
+    <p class="quote">« Tant qu'il restera<br>un grenadier debout,<br><em>la ligne tiendra. »</em></p>
+    <p class="attrib">— Esprit du 82<sup>ème</sup> Régiment de Grenadiers à Pied</p>
+  </div>
+</section>
+
+<!-- ======================== COMPAGNIES ======================== -->
+<section class="section compagnies" id="compagnies" data-screen-label="Structure">
+  <div class="wrap center">
+    <h2 class="section-title">Structure du Régiment</h2>
+    <span class="eyebrow" style="margin:14px 0 0">Ordre de bataille</span>
+    <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
+    <p class="lead">Trois Corps, six unités, un seul drapeau. Chacun y trouve sa place selon son style de jeu.</p>
+  </div>
+
+  <div class="wrap" style="margin-top:54px">
+    <div class="command-banner reveal">
+      <h3>Commandement Général</h3>
+      <span>État-Major du 82GRP</span>
+    </div>
+    <div class="command-stem"></div>
+
+    <div class="corps-grid">
+      <!-- 1er Corps -->
+      <div class="corps reveal" style="--corps-accent: #4a76b8">
+        <div class="corps-head">
+          <div class="corps-num">Ier C.</div>
+          <h3>1<sup>er</sup> Corps</h3>
+          <span class="roman">«&nbsp;Du tonnerre naît la victoire&nbsp;!&nbsp;»</span>
+        </div>
+        <div class="units">
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Grenadiers</b><p>L'élite de choc, premiers au feu et derniers à reculer.</p></span>
+          </div>
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Artillerie</b><p>Les maîtres du canon : la foudre de la Grande Armée.</p></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2eme Corps -->
+      <div class="corps reveal" style="--corps-accent: #d8d2c4">
+        <div class="corps-head">
+          <div class="corps-num">IIe C.</div>
+          <h3>2<sup>ème</sup> Corps</h3>
+          <span class="roman">«&nbsp;Là où nous passons, le <span class="secret-trigger" id="secretSilence" title="…">silence</span> suit&nbsp;!&nbsp;»</span>
+        </div>
+        <div class="units">
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Infanterie de ligne</b><p>Le mur de baïonnettes, discipliné et inébranlable.</p></span>
+          </div>
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Infanterie légère</b><p>Tirailleurs véloces : harcèlement et escarmouche.</p></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3eme Corps -->
+      <div class="corps reveal" style="--corps-accent: var(--red)">
+        <div class="corps-head">
+          <div class="corps-num">IIIe C.</div>
+          <h3>3<sup>ème</sup> Corps</h3>
+          <span class="roman">«&nbsp;La Garde tient, la Cavalerie frappe&nbsp;!&nbsp;»</span>
+        </div>
+        <div class="units">
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Garde à pied</b><p>La Vieille Garde : prestige, tenue et bravoure légendaire.</p></span>
+          </div>
+          <div class="unit">
+            <span class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" style="fill:var(--gold-bright)" stroke="none"/></svg></span>
+            <span><b>Cavalerie</b><p>La charge tonnante : mobilité, panache et furie au galop.</p></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap center grades-intro" id="grades">
+    <div class="subsection-sep"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg><span></span></div>
+    <h3 class="subsection-title">La Hiérarchie</h3>
+    <p class="lead">Du  Marie-Louise au Maréchal d'Empire, chacun gravit les échelons au mérite. Voici la voie de l'avancement au 82ème Régiment de Grenadiers à Pied.</p>
+    <p class="grades-hint">Chaque grade porte son numéro d’échelon&nbsp;: on s’engage Marie-Louise (n°&nbsp;1) et l’on gravit un à un les échelons jusqu’au Maréchal d’Empire (n°&nbsp;30).</p>
+  </div>
+
+  <div class="wrap grades-tiers">
+    <details class="tier reveal" style="--tier-accent: var(--gold-bright)" open>
+      <summary class="tier-head"><span class="tier-rank">I</span><h3>Officiers généraux</h3><span class="tier-range">Échelons 26–30</span></summary>
+      <div class="rank-grid">
+        <div class="rank"><span class="rk-no">30</span><span class="rk-abbr">ME</span><span class="rk-name">Maréchal d'Empire</span></div>
+        <div class="rank"><span class="rk-no">29</span><span class="rk-abbr">GA</span><span class="rk-name">Général d'Armée</span></div>
+        <div class="rank"><span class="rk-no">28</span><span class="rk-abbr">G-DI</span><span class="rk-name">Général de Division</span></div>
+        <div class="rank"><span class="rk-no">27</span><span class="rk-abbr">G-Bgd</span><span class="rk-name">Général de Brigade</span></div>
+        <div class="rank"><span class="rk-no">26</span><span class="rk-abbr">Lt-Gen</span><span class="rk-name">Lieutenant-Général</span></div>
+      </div>
+    </details>
+
+    <details class="tier reveal" style="--tier-accent: var(--gold)">
+      <summary class="tier-head"><span class="tier-rank">II</span><h3>Officiers supérieurs</h3><span class="tier-range">Échelons 22–25</span></summary>
+      <div class="rank-grid">
+        <div class="rank"><span class="rk-no">25</span><span class="rk-abbr">Col</span><span class="rk-name">Colonel</span></div>
+        <div class="rank"><span class="rk-no">24</span><span class="rk-abbr">Ltn-Col</span><span class="rk-name">Lieutenant-Colonel</span></div>
+        <div class="rank"><span class="rk-no">23</span><span class="rk-abbr">C-Bat</span><span class="rk-name">Chef de Bataillon</span></div>
+        <div class="rank"><span class="rk-no">22</span><span class="rk-abbr">Cmd</span><span class="rk-name">Commandant</span></div>
+      </div>
+    </details>
+
+    <details class="tier reveal" style="--tier-accent: var(--gold)">
+      <summary class="tier-head"><span class="tier-rank">III</span><h3>Officiers subalternes</h3><span class="tier-range">Échelons 18–21</span></summary>
+      <div class="rank-grid">
+        <div class="rank"><span class="rk-no">21</span><span class="rk-abbr">Cpt</span><span class="rk-name">Capitaine</span></div>
+        <div class="rank"><span class="rk-no">20</span><span class="rk-abbr">Ltn</span><span class="rk-name">Lieutenant</span></div>
+        <div class="rank"><span class="rk-no">19</span><span class="rk-abbr">S-Ltn</span><span class="rk-name">Sous-Lieutenant</span></div>
+        <div class="rank"><span class="rk-no">18</span><span class="rk-abbr">Asp</span><span class="rk-name">Aspirant</span></div>
+      </div>
+    </details>
+
+    <details class="tier reveal" style="--tier-accent: #b9c2d4">
+      <summary class="tier-head"><span class="tier-rank">IV</span><h3>Sous-Officiers</h3><span class="tier-range">Échelons 12–17</span></summary>
+      <div class="rank-grid">
+        <div class="rank"><span class="rk-no">17</span><span class="rk-abbr">Maj</span><span class="rk-name">Major</span></div>
+        <div class="rank"><span class="rk-no">16</span><span class="rk-abbr">Adj-C</span><span class="rk-name">Adjudant-Chef</span></div>
+        <div class="rank"><span class="rk-no">15</span><span class="rk-abbr">Adj</span><span class="rk-name">Adjudant</span></div>
+        <div class="rank"><span class="rk-no">14</span><span class="rk-abbr">Sgt-Maj</span><span class="rk-name">Sergent-Major</span></div>
+        <div class="rank"><span class="rk-no">13</span><span class="rk-abbr">Sgt-C</span><span class="rk-name">Sergent-Chef</span></div>
+        <div class="rank"><span class="rk-no">12</span><span class="rk-abbr">Sgt</span><span class="rk-name">Sergent</span></div>
+      </div>
+    </details>
+
+    <details class="tier reveal" style="--tier-accent: #97a1b5">
+      <summary class="tier-head"><span class="tier-rank">V</span><h3>Militaires du rang</h3><span class="tier-range">Échelons 1–11</span></summary>
+      <div class="rank-grid">
+        <div class="rank"><span class="rk-no">11</span><span class="rk-abbr">Bgd-C</span><span class="rk-name">Brigadier Chef</span></div>
+        <div class="rank"><span class="rk-no">10</span><span class="rk-abbr">Bgd</span><span class="rk-name">Brigadier</span></div>
+        <div class="rank"><span class="rk-no">9</span><span class="rk-abbr">Cpl-F</span><span class="rk-name">Caporal Fourrier</span></div>
+        <div class="rank"><span class="rk-no">8</span><span class="rk-abbr">Cpl</span><span class="rk-name">Caporal</span></div>
+        <div class="rank"><span class="rk-no">7</span><span class="rk-abbr">S-Vet</span><span class="rk-name">Soldat vétéran</span></div>
+        <div class="rank"><span class="rk-no">6</span><span class="rk-abbr">S-Brv</span><span class="rk-name">Soldat breveté</span></div>
+        <div class="rank"><span class="rk-no">5</span><span class="rk-abbr">S1e</span><span class="rk-name">Soldat de 1ère classe</span></div>
+        <div class="rank"><span class="rk-no">4</span><span class="rk-abbr">S2e</span><span class="rk-name">Soldat de 2ème classe</span></div>
+        <div class="rank"><span class="rk-no">3</span><span class="rk-abbr">S3e</span><span class="rk-name">Soldat de 3ème classe</span></div>
+        <div class="rank"><span class="rk-no">2</span><span class="rk-abbr">Csc</span><span class="rk-name">Conscrit</span></div>
+        <div class="rank"><span class="rk-no">1</span><span class="rk-abbr">M-Lse</span><span class="rk-name">Marie-Louise</span></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ========================= TRAILER ========================= -->
+<section class="section trailer" id="trailer" data-screen-label="Trailer">
+  <div class="wrap center" style="margin-bottom:46px">
+    <span class="eyebrow">Notre vidéo officielle</span>
+    <h2 class="section-title">Le Trailer du 82GRP</h2>
+    <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
+    <p class="lead">Le trailer officiel du régiment : l'esprit du 82GRP condensé en une vidéo — charges, salves et fraternité sous les couleurs tricolores.</p>
+  </div>
+  <div class="wrap">
+    <div class="trailer-frame reveal" id="trailerFrame">
+      <iframe src="https://www.youtube.com/embed/SdqV6z2sbac?rel=0&modestbranding=1" title="Bande-annonce du 82GRP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="center video-note">
+      La vidéo ne se lance pas ?
+      <a href="https://youtu.be/SdqV6z2sbac" target="_blank" rel="noopener">Voir la vidéo sur YouTube ↗</a>
+    </p>
+  </div>
+
+  <div class="wrap center grades-intro" id="galerie">
+    <div class="subsection-sep"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg><span></span></div>
+    <h3 class="subsection-title">La Galerie</h3>
+    <p class="lead">Le 82GRP en valeur sur Holdfast — nos plus belles captures de batailles, formations et événements.</p>
+  </div>
+  <div class="wrap" style="margin-top:34px">
+    <div class="gal-grid reveal">
+      <div class="cell w2 h2"><img src="assets/gallery/propa1.png" alt="Colonne du 82GRP en marche, drapeaux déployés" loading="lazy" /><div class="zoom"><span>En colonne, marche</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/hero-officer.png" alt="Officier du 82GRP, sabre levé devant la troupe" loading="lazy" /><div class="zoom"><span>Présentez… armes !</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/propa5.png" alt="Ligne de feu du 82GRP au coucher du soleil" loading="lazy" /><div class="zoom"><span>Feu de peloton</span></div></div>
+      <div class="cell w4"><img src="assets/gallery/propa2.png" alt="Ligne de bataille panoramique du 82GRP" loading="lazy" /><div class="zoom"><span>La ligne tient bon</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/propa3.png" alt="Formation du régiment près de l'église" loading="lazy" /><div class="zoom"><span>Rassemblement</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/propa7.png" alt="Formation aérienne des compagnies du 82GRP" loading="lazy" /><div class="zoom"><span>Ordre serré</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/propa6.png" alt="Compagnies à genou, étendards au vent" loading="lazy" /><div class="zoom"><span>Garde à vous</span></div></div>
+      <div class="cell w2"><img src="assets/gallery/propa4.png" alt="Photo de groupe du 82GRP devant les remparts" loading="lazy" /><div class="zoom"><span>Le régiment au complet</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CALENDRIER ======================== -->
+<section class="section calendrier" id="calendrier" data-screen-label="Calendrier">
+  <div class="wrap center">
+    <span class="eyebrow">Planning hebdomadaire</span>
+    <h2 class="section-title">Calendrier 82GRP — 2026</h2>
+    <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
+  </div>
+  <p class="cal-sub">Tous les événements se déroulent en soirée — rejoignez le Discord pour les annonces et les inscriptions.</p>
+
+  <div class="wrap">
+    <div class="cal-frame reveal">
+      <div class="cal-title">Ordre du jour</div>
+      <div class="cal-wrap">
+      <table class="calendar">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th>
+            <th>Vendredi</th><th>Samedi</th><th>Dimanche</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>19h</th>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <th>20h</th>
+            <td></td>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M4.5 18.5C9 15 14 10 18 4.5"/><path d="M19.5 18.5C15 15 10 10 6 4.5"/><path d="M3 17 6 20"/><path d="M21 17 18 20"/></svg>Cav<span class="t">20h00</span></div></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <th>21h</th>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M6 21V4M6 4h11l-2 3 2 3H6"/></svg>LB* NJDE<span class="t">21h00</span></div></td>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M12 3 6 13h6z"/><path d="M12 6v7"/><path d="M4 16h15l-2.5 4H6.5z"/></svg>Naval<span class="t">21h15</span></div></td>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M6 21V4M6 4h11l-2 3 2 3H6"/></svg>LB* 26TH<span class="t">21h00</span></div></td>
+            <td><div class="slot free"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Créneau libre<span class="t">21h00</span></div></td>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M6 21V4M6 4h11l-2 3 2 3H6"/></svg>LB* LI<span class="t">21h00</span></div></td>
+            <td><div class="slot free"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Créneau libre<span class="t">21h00</span></div></td>
+            <td><div class="slot event"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M6 21V4M6 4h11l-2 3 2 3H6"/></svg>Guerre des Régiments<span class="t">21h00</span></div></td>
+          </tr>
+          <tr>
+            <th>22h</th>
+            <td></td><td></td><td></td><td></td>
+            <td><div class="slot promo"><svg class="ic" viewBox="0 0 24 24" stroke-width="1.6"><path d="M5 9l7-4 7 4M5 14l7-4 7 4M5 19l7-4 7 4"/></svg>Promo<span class="t">22h00</span></div></td>
+            <td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="cal-legend">
+      <span><i class="lg-event"></i> Événement (inter-régiments)</span>
+      <span><i class="lg-promo"></i> Promotion</span>
+      <span><i class="lg-free"></i> Créneau libre — entraînement ou soirée multigaming</span>
+      <span class="lg-note">* Line Battle</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== RECRUTEMENT ======================== -->
+<section class="section recrutement" id="recrutement" data-screen-label="Rejoindre">
+  <div class="wrap center">
+    <span class="eyebrow">Engagez-vous</span>
+    <h2 class="section-title">Rejoindre le 82GRP</h2>
+    <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
+    <p class="lead">Débutant ou vétéran, nous accueillons tous les joueurs de Holdfast: Nations At War ou bien encore les passionnés. Aucune expérience requise : seule la bonne humeur compte.</p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n">01</div>
+        <h4>Rejoignez le Discord</h4>
+        <p>Cliquez sur le lien et présentez-vous en remplissant le formulaire.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">02</div>
+        <h4>Choisissez votre corps d'armée</h4>
+        <p>Grenadiers, ligne, cavalerie, artillerie… trouvez ce qui vous correspond le plus.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">03</div>
+        <h4>Montez au feu</h4>
+        <p>Participez aux entraînements et aux événements aux côtés de vos camarades.</p>
+      </div>
+    </div>
+
+    <div class="join-card reveal">
+      <h3>Au rapport, soldat !</h3>
+      <p>Le drapeau du 82ème vous attend. Rejoignez une communauté soudée et vivez l'épopée napoléonienne.</p>
+      <div class="join-stats" data-live-badge hidden>
+        <div class="join-stat">
+          <strong data-live="total">—</strong>
+          <span>membres</span>
+        </div>
+        <div class="join-stat-sep"></div>
+        <div class="join-stat">
+          <strong><span class="live-dot"></span><span data-live="online">—</span></strong>
+          <span>en ligne</span>
+        </div>
+      </div>
+      <a href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:16px;padding:18px 38px;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.3.5a14.6 14.6 0 0 1 4.3 1.4 13.7 13.7 0 0 0-11-.1A14 14 0 0 1 12.8 3l-.2-.5A19.8 19.8 0 0 0 3.7 4.4 20.3 20.3 0 0 0 .2 18.1a19.9 19.9 0 0 0 6 3l.8-1.3a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.1 0l.5.4a12.9 12.9 0 0 1-2 1l.8 1.3a19.9 19.9 0 0 0 6-3 20.3 20.3 0 0 0-3.4-13.7ZM8.3 14.7c-1.2 0-2.1-1.1-2.1-2.4S7.1 9.9 8.3 9.9s2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Zm7.4 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4-.9 2.4-2.1 2.4Z"/></svg>
+        Rejoindre le Discord
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap center grades-intro" id="faq">
+    <div class="subsection-sep"><span></span><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg><span></span></div>
+    <h3 class="subsection-title">Questions Fréquentes</h3>
+    <p class="lead">Tout ce qu'il faut savoir avant de rejoindre le 82ème Régiment de Grenadiers à Pied, notre communauté francophone sur Holdfast: Nations At War.</p>
+  </div>
+
+  <div class="wrap faq-list">
+    <details class="faq-item reveal" open>
+      <summary>Qu'est-ce que le 82GRP ?</summary>
+      <div class="faq-a"><p>Le 82GRP (82ème Régiment de Grenadiers à Pied) est un <strong>régiment français sur Holdfast: Nations At War</strong>. C'est une communauté francophone réunie autour de l'époque napoléonienne, qui organise des batailles en ligne, des entraînements et des événements entre régiments dans la bonne humeur.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Comment rejoindre un régiment français sur Holdfast ?</summary>
+      <div class="faq-a"><p>Rien de plus simple : rejoignez notre <a href="https://discord.gg/Ak2KTBhHhd" target="_blank" rel="noopener">serveur Discord</a>, présentez-vous en remplissant le formulaire d'engagement, choisissez votre corps d'armée (Grenadiers, infanterie de ligne, légère, cavalerie, artillerie ou Garde) et participez à votre première bataille. Aucune candidature compliquée — la motivation et la bonne humeur suffisent.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Faut-il de l'expérience pour rejoindre le régiment ?</summary>
+      <div class="faq-a"><p>Non. Le 82GRP accueille aussi bien les débutants que les vétérans de Holdfast. Nos gradés forment les nouvelles recrues lors des entraînements : vous apprendrez les formations, les ordres et la discipline de ligne au fil des sessions. C'est l'un des meilleurs moyens de débuter Holdfast: Nations At War en français.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Sur quels modes de jeu joue le régiment ?</summary>
+      <div class="faq-a"><p>Notre régiment Holdfast est actif sur touts les modes mais principalement Nations at War avec des line battles entre régiments, combats de cavalerie, batailles navales, événements « Guerre des Régiments » et créneaux libres pour l'entraînement ou les soirées multigaming. Le planning hebdomadaire complet est disponible dans la section Calendrier.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Le 82GRP est-il une communauté francophone active ?</summary>
+      <div class="faq-a"><p>Oui ! Nous sommes une communauté française active toute la semaine, en soirée. Nos membres jouent, échangent et progressent ensemble sur Discord et en jeu. Que vous cherchiez un régiment français Holdfast sérieux ou simplement une bande de camarades pour vous amuser, vous êtes au bon endroit.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ SEO ============================ -->
+<section class="section seo-band" aria-label="À propos du régiment">
+  <div class="wrap">
+    <div class="seo-quote reveal">
+      <div class="fleuron"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 4 5 4 5s-3 1-4 5c-1-4-4-5-4-5s3-1 4-5Z"/></svg></div>
+      <p class="seo-text">Le 82GRP s'impose comme le <strong>régiment francophone de référence sur Holdfast Nations At War</strong>. Une communauté en pleine croissance, active toute la semaine, avec des <strong>line battles</strong> organisées, de la cavalerie et du naval. Rejoignez le mouvement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== FOOTER ========================== -->
+<footer class="footer">
+  <div class="tricolore" style="margin-bottom:40px"></div>
+  <div class="wrap footer-inner">
+    <a href="#hero" class="brand">
+      <img src="assets/logo-82.png" alt="Emblème 82GRP" />
+      <span class="brand-txt">
+        <b>82GRP</b>
+        <span>Grenadiers à Pied</span>
+      </span>
+    </a>
+    <div class="footer-links">
+      <a href="#presentation">Le Régiment</a>
+      <a href="#compagnies">Structure</a>
+      <a href="#calendrier">Calendrier</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#recrutement">Rejoindre</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    82<sup>ème</sup> Régiment de Grenadiers à Pied — Communauté Holdfast: Nations At War · «&nbsp;Vaincre n'importe qui, n'importe où, n'importe quand&nbsp;!&nbsp;»
+  </div>
+</footer>
+
+<!-- ========================== LIGHTBOX ========================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Fermer">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent">&#8249;</button>
+  <img id="lbImg" alt="" />
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">&#8250;</button>
+</div>
+
+<!-- ===================== EASTER EGG « L'ASILE » ===================== -->
+<div class="chaos-overlay" id="chaosOverlay" aria-hidden="true">
+  <div class="chaos-strobe"></div>
+  <audio id="rickAudio" src="assets/chaos/rickroll.mp3" loop preload="auto"></audio>
+  <div class="chaos-title" id="chaosTitle">ASILE</div>
+  <button class="chaos-stop" id="chaosStop" type="button">Reprendre ses esprits</button>
+</div>
+
+<script>
+  // Ouverture — le logo file dans l'emblème du hero
+  (() => {
+    const curtain = document.getElementById('curtain');
+    if (!curtain) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { curtain.classList.add('done'); return; }
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('intro-cloak');
+    const lift = () => {
+      // Phase 1 : le texte fait son fondu de sortie en premier
+      curtain.classList.add('word-out');
+      // Phase 2 : après que le texte a disparu, le petit logo rejoint le gros
+      setTimeout(() => {
+        const seal = curtain.querySelector('.intro-seal');
+        const target = document.querySelector('.hero-emblem');
+        document.body.classList.remove('intro-cloak'); // fait apparaître le site en fondu
+        if (seal && target) {
+          const s = seal.getBoundingClientRect();
+          const t = target.getBoundingClientRect();
+          const k = t.width / (s.width * 0.78);
+          const dx = (t.left + t.width / 2) - (s.left + s.width / 2);
+          const dy = (t.top + t.height / 2) - (s.top + s.height / 2);
+          seal.style.animation = 'none';
+          seal.style.opacity = '1';
+          seal.style.transform = 'scale(1)';
+          void seal.offsetWidth;
+          requestAnimationFrame(() => {
+            seal.style.transition = 'transform 1.5s cubic-bezier(.45,0,.18,1), opacity .55s ease .12s';
+            seal.style.transform = 'translate(' + dx + 'px,' + dy + 'px) scale(' + k + ')';
+            seal.style.opacity = '0';
+          });
+        }
+        curtain.classList.add('lifting');
+        setTimeout(() => { document.body.style.overflow = ''; }, 1000);
+        setTimeout(() => {
+          curtain.classList.add('done');
+        }, 2200);
+      }, 950);
+    };
+    window.addEventListener('load', () => setTimeout(lift, 2100));
+    if (document.readyState === 'complete') setTimeout(lift, 2100);
+  })();
+
+  // Compteur Discord en direct (membres + en ligne)
+  (() => {
+    const badges = document.querySelectorAll('#discord-live, [data-live-badge]');
+    if (!badges.length) return;
+    const elsOnline = document.querySelectorAll('[data-live="online"]');
+    const elsTotal = document.querySelectorAll('[data-live="total"]');
+    const fmt = (n) => n.toLocaleString('fr-FR');
+    const animateTo = (el, val) => {
+      const dur = 900, t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(Math.round(val * e));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    let shown = false;
+    const load = () => {
+      fetch('https://discord.com/api/v9/invites/Ak2KTBhHhd?with_counts=true')
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(d => {
+          const online = d.approximate_presence_count;
+          const total = d.approximate_member_count;
+          if (online == null && total == null) return;
+          if (!shown) {
+            badges.forEach(b => { b.hidden = false; });
+            requestAnimationFrame(() => badges.forEach(b => b.classList.add('show')));
+            if (online != null) elsOnline.forEach(el => animateTo(el, online));
+            if (total != null) elsTotal.forEach(el => animateTo(el, total));
+            shown = true;
+          } else {
+            if (online != null) elsOnline.forEach(el => el.textContent = fmt(online));
+            if (total != null) elsTotal.forEach(el => el.textContent = fmt(total));
+          }
+        })
+        .catch(() => {});
+    };
+    load();
+    setInterval(load, 300000); // rafraîchit toutes les 5 min
+  })();
+
+  // Musique de fond
+  (() => {
+    const audio = document.getElementById('bgm');
+    const btn = document.getElementById('bgm-toggle');
+    if (!audio || !btn) return;
+    const STORE = 'bgm-82-on';
+    audio.volume = 0;
+    let target = 0.2, fadeTimer = null;
+    const fadeTo = (vol) => {
+      clearInterval(fadeTimer);
+      fadeTimer = setInterval(() => {
+        const d = vol - audio.volume;
+        if (Math.abs(d) < 0.02) { audio.volume = vol; clearInterval(fadeTimer); }
+        else audio.volume = Math.max(0, Math.min(1, audio.volume + d * 0.08));
+      }, 40);
+    };
+    const setUI = (on) => {
+      btn.classList.toggle('playing', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.setAttribute('aria-label', on ? 'Couper la musique' : 'Activer la musique');
+    };
+    const play = () => audio.play().then(() => { fadeTo(target); setUI(true); localStorage.setItem(STORE, '1'); }).catch(() => {});
+    const pause = () => { fadeTo(0); setUI(false); localStorage.setItem(STORE, '0'); setTimeout(() => audio.pause(), 450); };
+    btn.addEventListener('click', () => {
+      if (audio.paused || btn.classList.contains('playing') === false) play();
+      else pause();
+    });
+    // afficher le bouton une fois l'intro levée
+    setTimeout(() => btn.classList.add('ready'), 2600);
+    // reprise auto si l'utilisateur avait laissé la musique active
+    const wanted = localStorage.getItem(STORE) !== '0'; // par défaut: on tente
+    if (wanted) {
+      const tryStart = () => play();
+      setTimeout(tryStart, 2600);
+      // si bloqué par le navigateur, démarrer au 1er geste
+      const onFirst = () => { if (audio.paused) play(); window.removeEventListener('pointerdown', onFirst); window.removeEventListener('keydown', onFirst); };
+      window.addEventListener('pointerdown', onFirst);
+      window.addEventListener('keydown', onFirst);
+    }
+  })();
+
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Parallaxe du hero
+  (() => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const hero = document.querySelector('.hero');
+    const heroBg = document.querySelector('.hero-bg-img');
+    const heroCopy = document.querySelector('.hero-copy');
+    const heroEmblem = document.querySelector('.hero-emblem-wrap');
+    if (!hero || !heroBg) return;
+    let ticking = false;
+    const apply = () => {
+      const offset = Math.max(0, -hero.getBoundingClientRect().top);
+      if (offset < 1100) {
+        heroBg.style.transform = 'scale(1.14) translate3d(0,' + (offset * 0.30) + 'px,0)';
+        if (heroCopy) {
+          heroCopy.style.transform = 'translate3d(0,' + (offset * 0.18) + 'px,0)';
+          heroCopy.style.opacity = Math.max(0, 1 - offset / 520);
+        }
+        if (heroEmblem) {
+          heroEmblem.style.transform = 'translate3d(0,' + (offset * -0.07) + 'px,0)';
+        }
+      }
+      ticking = false;
+    };
+    const onScrollParallax = () => {
+      if (!ticking) { requestAnimationFrame(apply); ticking = true; }
+    };
+    window.addEventListener('scroll', onScrollParallax, { passive: true, capture: true });
+    window.addEventListener('resize', onScrollParallax, { passive: true });
+    apply();
+  })();
+
+  // Mobile drawer
+  const drawer = document.getElementById('drawer');
+  document.getElementById('burger').addEventListener('click', () => drawer.classList.add('open'));
+  document.getElementById('drawerClose').addEventListener('click', () => drawer.classList.remove('open'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const figs = Array.from(document.querySelectorAll('.gal-grid .cell img'));
+  let lbIndex = 0;
+  const showLb = (i) => { lbIndex = (i + figs.length) % figs.length; lbImg.src = figs[lbIndex].src; lbImg.alt = figs[lbIndex].alt; };
+  figs.forEach((img, i) => img.parentElement.addEventListener('click', () => { showLb(i); lb.classList.add('open'); }));
+  const closeLb = () => lb.classList.remove('open');
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); showLb(lbIndex - 1); });
+  document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); showLb(lbIndex + 1); });
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') showLb(lbIndex - 1);
+    if (e.key === 'ArrowRight') showLb(lbIndex + 1);
+  });
+
+  /* =====================================================================
+     EASTER EGG « L'ASILE » — 5 clics sur le mot « silence » (2ème Corps)
+     ===================================================================== */
+  const CHAOS_IMAGES = [
+    "assets/chaos/c01.png","assets/chaos/c02.gif","assets/chaos/c03.jpg","assets/chaos/c04.png",
+    "assets/chaos/c05.png","assets/chaos/c06.png","assets/chaos/c07.png","assets/chaos/c08.png",
+    "assets/chaos/c09.jpg","assets/chaos/c10.png","assets/chaos/c11.png","assets/chaos/c12.png",
+    "assets/chaos/c13.png","assets/chaos/c14.png","assets/chaos/c15.png","assets/chaos/c16.png"
+  ];
+  const CHAOS_WORDS = ["ASILE", "82GRP", "FOLIE", "GLOIRE & FOLIE", "LA CHASSE AU FÉLIN",
+                       "SI VIS PACEM PARA ASYLUM", "BIENVENUE AU 82", "LE SILENCE", "AAAAAH", "🚑", "💈", "🧠"];
+  const CHAOS_EMOJIS = ["🤪","😵‍💫","🤡","🌀","👁️","🚑","💊","🧠","🫡","🎺","🔔","⚡","💥","🥁","🪖"];
+  const CHAOS_COLORS = ["#ff00d4","#00ffea","#faff00","#ff2200","#6a00ff","#00ff66","#ffffff"];
+
+  const trigger = document.getElementById('secretSilence');
+  const overlay = document.getElementById('chaosOverlay');
+  const titleEl = document.getElementById('chaosTitle');
+  const stopBtn = document.getElementById('chaosStop');
+
+  // préchargement des images du délire
+  CHAOS_IMAGES.forEach(src => { const i = new Image(); i.src = src; });
+
+  let clicks = 0, clickTimer = null, chaosOn = false;
+  let spawnInt = null, titleInt = null;
+  const rickAudio = document.getElementById('rickAudio');
+
+  if (trigger) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(() => { clicks = 0; }, 1400); // fenêtre entre clics
+      if (clicks >= 5) { clicks = 0; launchChaos(); }
+    });
+  }
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  function spawnItem() {
+    const item = document.createElement('div');
+    item.className = 'chaos-item';
+    const W = window.innerWidth, H = window.innerHeight;
+    const x = rand(0, W), y = rand(0, H);
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+
+    const roll = Math.random();
+    if (CHAOS_IMAGES.length && roll < 0.78) {
+      const img = document.createElement('img');
+      img.src = pick(CHAOS_IMAGES);
+      img.style.width = rand(170, 430) + 'px';
+      item.appendChild(img);
+    } else if (roll < 0.9) {
+      item.classList.add('chaos-word');
+      item.textContent = pick(CHAOS_WORDS);
+      item.style.fontSize = rand(28, 86) + 'px';
+      item.style.color = pick(CHAOS_COLORS);
+    } else {
+      item.classList.add('chaos-emoji');
+      item.textContent = pick(CHAOS_EMOJIS);
+      item.style.fontSize = rand(40, 130) + 'px';
+    }
+
+    // animation aléatoire
+    const s = rand(0.6, 1.4);
+    item.style.setProperty('--s', s);
+    const anim = Math.random();
+    if (anim < 0.6) {
+      // flotte doucement
+      for (let i = 0; i <= 3; i++) {
+        item.style.setProperty('--x' + (i || 0), rand(-130, 130) + 'px');
+        item.style.setProperty('--y' + (i || 0), rand(-130, 130) + 'px');
+        item.style.setProperty('--r' + (i || 0), rand(-25, 25) + 'deg');
+      }
+      item.style.setProperty('--x0', '0px');
+      item.style.setProperty('--y0', '0px');
+      item.style.setProperty('--r0', rand(-12, 12) + 'deg');
+      item.style.animation = `chaosFloat ${rand(3.5, 6)}s ease-in-out infinite`;
+    } else if (anim < 0.8) {
+      item.style.animation = `chaosSpin ${rand(2.5, 5)}s linear infinite`;
+    } else {
+      item.style.animation = `chaosPop ${rand(0.4, 0.7)}s ease-out forwards`;
+    }
+
+    overlay.appendChild(item);
+    // les images restent visibles plus longtemps
+    setTimeout(() => item.remove(), rand(4500, 8500));
+  }
+
+  function startAudio() {
+    // 🎵🕺 Rickroll — lecture du MP3 en boucle
+    if (!rickAudio) return;
+    try {
+      rickAudio.currentTime = 0;
+      rickAudio.volume = 0.85;
+      const p = rickAudio.play();
+      if (p && p.catch) p.catch(() => {});
+    } catch (err) { /* lecture impossible */ }
+  }
+
+  function stopAudio() {
+    if (!rickAudio) return;
+    try { rickAudio.pause(); rickAudio.currentTime = 0; } catch (e) {}
+  }
+
+  function launchChaos() {
+    chaosOn = true;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    // 🔒 enfermé dans l'asile : on bloque le scroll
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    startAudio();
+    // salve d'éléments (relançable à chaque déclenchement)
+    for (let i = 0; i < 14; i++) setTimeout(spawnItem, i * 80);
+    if (!spawnInt) spawnInt = setInterval(spawnItem, 230);
+    if (!titleInt) titleInt = setInterval(() => { titleEl.textContent = pick(CHAOS_WORDS); }, 900);
+  }
+
+  function stopChaos() {
+    if (!chaosOn) return;
+    chaosOn = false;
+    clearInterval(spawnInt); clearInterval(titleInt);
+    spawnInt = null; titleInt = null;
+    stopAudio();
+    // 🔓 libéré : on rend le scroll
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    titleEl.textContent = 'ASILE';
+    overlay.querySelectorAll('.chaos-item').forEach(el => el.remove());
+  }
+
+  if (stopBtn) stopBtn.addEventListener('click', stopChaos);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && chaosOn) stopChaos(); });
+</script>
+</body>
+</html>
